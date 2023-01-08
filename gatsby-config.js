@@ -9,9 +9,9 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Deepsilver`,
+    description: `Deep Silver develops and publishes video games for all major consoles worldwide and published over 200 games on different platforms so far.`,
+    author: `@Prijectkamiii`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
@@ -39,5 +39,12 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve:"gatsby-source-wordpress",
+      options: {
+        url: `http://deep-silver.local/graphql`,
+      }
+    },
+
   ],
 }

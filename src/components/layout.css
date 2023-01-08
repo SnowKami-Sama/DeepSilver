@@ -1,7 +1,7 @@
 :root {
   --border-radius: 4px;
   --color-text: #333;
-  --color-primary: #7026b9;
+  --color-primary: #c40d0d;
   --color-code-bg: #fff4db;
   --color-code: #8a6534;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
@@ -222,3 +222,4 @@ pre tt:before,
 pre tt:after {
   content: none;
 }
+

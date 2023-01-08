@@ -7,11 +7,13 @@
 
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby" 
+import { container, nav, navLinks, navLinkItem, navLinkText } from './layout.module.css'
 
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ pageTitle,children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -22,9 +24,36 @@ const Layout = ({ children }) => {
     }
   `)
 
+
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      
+      <div className={container}>    
+      <title>{pageTitle}</title>
+      <nav className={nav}>
+        <ul className={navLinks}>
+          <li className={navLinkItem}>
+            <Link className={navLinkText} to="/">
+              Home
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link className={navLinkText} to="/about">
+              About
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link className={navLinkText} to="/game">
+              Games
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      </div>
+    
+
       <div
         style={{
           margin: `0 auto`,
@@ -47,5 +76,7 @@ const Layout = ({ children }) => {
     </>
   )
 }
+
+
 
 export default Layout
