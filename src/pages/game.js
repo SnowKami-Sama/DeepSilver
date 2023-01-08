@@ -10,13 +10,13 @@ import Layout from '../components/layout'
       } */
 
 const GamesPage = ({data: {wpGame:{gameFields}}}) => {
-  
+
   return (
     <main>
       <Layout pageTitle="Games From Deep Silver">
-      <Link to="/metro-exodus">{gameFields.name}</Link>
+      <Link to="/metro-exodus">Metro Exodus</Link>
       <br/>
-      <Link to="/dead-island-2">Dead island 2</Link>
+      <Link to="/dead-island-2">{gameFields.name}</Link>
       <br/>
       <Link to="/chivalry-2">Chivalry 2</Link>
 
